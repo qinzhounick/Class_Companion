@@ -1,0 +1,512 @@
+will also do well on other binary classification problems. And also that the hyperparameter that works best for a binary classification problem will not always work best for all the binaries.
+
+your prosecution process, which is why I want you to explore three to see if you can actually capture that difference. Now when it comes to actually defining those communication
+
+I believe one example was the data set that you currently have.
+
+is a multi-class classification problem, then you can simply pick three sets of pairs within those classes to use as your binary classification problem.
+
+So if you were, for example, trying to classify a bunch of samples that were associated with letters on the alphabet, you could just pick three pairs, like A vs. B, C vs. D, E vs. X.
+
+those make or create binary constitutional problems and your task at that point would simply be to pull out all of the examples that are labeled A and B because you are under threat.
+
+for at least 200 of them to work with 100 of those samples, and then do the same thing to work with other minor application problems. The other option is if it's already.
+
+a binary classification problem in which case you can figure out some way to split up your dataset into three based off of some other defined feature. So the binary classification problem...
+
+in the least prediction problem, then what you could do is you could go into your data set and say, well, is it possible for me to split up this problem so that I am checking to see if I can...
+
+I know that when I'm using samples, all the samples are, for example, people younger than
+
+I'm trying to do that disease prediction with all of the samples of people between the ages of 20 and 60. And then the last primary classification problem is youth.
+
+The prediction is the same, but the data set is not the same.
+
+And that's basically what happens when you do a numerical. When you do a numerical, it's basically first converted into a categorical problem. So you could bring your...
+
+or you could bin them so that you keep more time on the concentration problem. And which way you choose to bin it, well that's up to you.
+
+to find the follow-up steps of either the multi-class approach or the binary class approach. You have alternative pathways.
+
+I will convert you into a primary consultation follow-up doing tech work. Feel free to follow up with me, either during and after an hour or on the after. We can do a bit of a back and forth.
+
+confirm that that would work as well. But that's sort of the basic overview of the sample that I had in mind. Any further clarifications for that point?
+
+Alright, cool, in that case...
+
+we can go ahead and get started.
+
+Alright, so today we will be talking about the naive Bayes classifier. Who is familiar with the naive Bayes classifier?
+
+classification model. Okay, more to review. This is definitely one that is not generally used in a lot of other contexts, as you see.
+
+machine learning course and you've probably seen it there, I believe 517 is still covering it, but other than that it's not very well known, but it can be fairly useful.
+
+So, to take a couple of steps back, up until now, we've been discussing these sort of class occasion problems. There was sort of an understanding of the importance of having a class occasion.
+
+that classification problems could have several kinds of response values, right? And we know that they have to be categorical, or at least that they are categorical-like.
+
+But you could technically categorize those response values into nominal categorical response values, which could themselves be either binary or multi-class.
+
+It could be an ordinal categorical, or if you wanted to, you could also consider a discreet numerical to be a classification problem, usually only in the discreet category.
+
+If you're looking at the entire range of discrete numbers from zero to infinity, that's probably not a great class.
+
+But if your discrete numerical values are only 0, 1, 2, 3, then that's perfectly applicable to solve that even-ordered A-classification problem.
+
+rather than a regression model. So real quick, just a trick with you. Name a model that could be used for a binary classification problem.
+
+So we have data, we know for a fact that the response value of that data is a binary categorical feature.
+
+Thank you.
+
+시청 해주셔서 감사합니다.
+
+All right, we've got the symmetries, perceptrons, logistics, K and M, and SVM, linear regression,
+
+
+
+This paper, I think, you know, I guess is what a generalist would say, that it would be a 500-plus reading problem, yes, that would work. Other than that, it's pretty good.
+
+Now, most likely, when you are approaching a question like that, the thing that you consider is what kind of outputs does that model give you, right?
+
+gives me some output value that is easily interpretable as a binary concentration split, then it would work for a binary concentration problem.
+
+So we've seen several models at this point, and some of them have different kinds of outputs. We have models that only output a single class value, whatever class value that output is, that is the output.
+
+prediction. We also have some models that output a single score. The interpretation is that that score is for a positive label prediction, and so we threshold on the
+
+in order to accept or deny that positive prediction. If we deny the positive prediction, then we simply assume it's a prediction of the negative. So that works best in binary constitution.
+
+And then finally, we've also seen classification models that output a score for every possible class label in our data set. So once we have...
+
+And that's the final prediction of our model.
+
+Name a model that does that last option here, outputs a score for each class.
+
+시청 해주셔서 감사합니다.
+
+시청해주셔서 감사합니다.
+
+It's... It's... It's... It's... It's...
+
+Okay, so we've got ANN and PNN, basically neural networks.
+
+Those are good choices, right? Absolutely. We have seen examples in class where we gain a single output node for every one possible class.
+
+And the assumption here is that we should get enough fatality with each of those output nodes, at which point we can check to see which output node has the lowest fatality.
+
+That would be the final prediction. So those all work well. Let's see. Some of the other ones, like K&N. K&N is a little bit harder.
+
+to argue, I would say, because in a K&N, what happens is you gather all of your neighbors and then you ask your neighbors, what label they like?
+
+And so on the one hand you could argue that if you have multiple labels, then you could just count how many votes.
+
+And then the most number of votes is in fact what ends up being the final prediction, which technically you get a score for every single vote.
+
+So, I think that's arguably yes, yeah, you could go with that. In general, most of the time when you get output from PNN, you don't actually get all 
+
+of the votes in between, you simply get that final maximum value. But there is an intermediate there that you could argue that you get a score for every class label, which is how many of your neighbors have a...
+
+And then your final prediction is whichever one happens to be the correct one.
+
+Electrons are, specifically, you only have one output node and it's the sort of situation where when you have that output value, that is the score being predicted from the pie.
+
+and whatever it is you're thresholding method is what you do in order to figure out whether or not an option is negative class legal. You don't generally get one out.
+
+For decision trees, I would say, on the one hand, you can make a decision based on the
+
+argue yes to the same logic of the canons right the canons is when you gather a certain number of neighbors and you ask what all of those votes technically every class
+
+to get a number of votes and you just put in the maximum. The problem is that usually once you've created the decision tree and you've decided that once you reach a particular lead.
+
+in that decision tree, it's assigned a majority vote of training samples in there. You no longer keep track of training samples, and I think most implementations...
+
+Also, don't keep track of what the proportional breakdown was in that leaf? They only keep track of what that final condition was.
+
+of actually trying to make predictions with decision trees, you've lost the nuance of having a score for each class label. You actually only get that one prediction, which is whatever the training.
+
+So I'm going to say decision trees are not a good choice for this question. I will say, though, that you can argue random forks.
+
+In a random forest, you have a whole bunch of position trees, and usually you can actually get a breakdown of how many trees voted for each particular class label.
+
+So that would be interpretable as each class would be able to get a score, and your final prediction is whichever one got more trees than others.
+
+Any follow-up questions about sort of categorizing what models can do what?
+
+
+
+any one of the models that we've already discussed in class and make an assumption that model has. So I have an example here. Let's say you're doing a linear regression model.
+
+And that's why you can fit this into the computer progression model. So go ahead and feel free to discuss amongst yourselves.
+
+if you want to ask. But pick a model and name an assumption that model has.
+
+시청 해주셔서 감사합니다.
+
+
+
+시청 해주셔서 감사합니다.
+
+Thank you.
+
+Thank you for watching!
+
+시청 해주셔서 감사합니다.
+
+I'm sorry for the inconvenience. I'll be back next time. Have a good night. I'm sorry for the inconvenience. I'll be back next time.
+
+시청해주셔서 감사합니다.
+
+이 영상은 유료광고를 포함하고 있습니다.
+
+Thank you.
+
+Alright, let's see, uh, KMMs, uh, we've got sort of, uh, assuming peer-to-peer family
+
+Class labels, classes are strongly related to features, that there's group relationships. Nearest neighbors have equal influence, that's a good one.
+
+one. Let's see. Propos seems to be a hungry A&N that has an assumption of being a very versatile and beautiful feeder, which is probably true.
+
+true of most models, not just ANN. Yes, we do assume that once you've read a line, it's going to be dangerous. Does it increase the complete feature of the ANN?
+
+are considered conditional. Random forest is when creatures are randomly selected. Yes, that is part of random forest.
+
+we see that data follows the normal distribution and we don't have to worry about heredity. We have features on who is related to heredity.
+
+
+
+Multidimensional Theta, Multicollinearity, Theta can be separated with a linear boundary
+
+out here, seeing people who just do programming, okay, cool, yeah, there's a lot of things that are...
+
+The key is depending on what kind of a model you're using. Some of it will basically depend on the statistics of how you're implementing the model.
+
+Some of it will depend on the logic of the model, some of it will purely depend on the fact that when we're implementing a model, we expect the data to be in a certain sort 
+
+So for example, if you're using a linear regression model or an A-N model, you assume that the data values are linear and that they're meaningful.
+
+in a numerical sense, whereas if you're using something like an NN or a decision tree, it's perfectly fine to have the data to be categorical or numerical. You could have a mix of both.
+
+decision trees and pandemics can handle on your situation, so those are also assumptions that are good to keep track of.
+
+models we've worked with so far has is that none of the data is missing. Some models are better than others at handling outliers, but most models don't
+
+So we have a methodology for handling missing data, so that is something to also keep in mind.
+
+general ones in mind before we get started. Okay. So. We have a bunch of models that are
+
+
+
+to you that most likely their label is a good predictor for what your label should be as well. We have decision trees, which is this, this, that, and that way. Well, if you are...
+
+We are landing on the things we call a pathway, a bunch of training data, that's whatever is there for you and what we also apply to you.
+
+you know, logistic regression, which is sort of this idea that if we have certain spread lines in the linear relationships, we can get our response values, get our training data.
+
+And that most likely also applies to my test data as well, you know, sort of combating for difference distribution, you know, for biases and et cetera.
+
+So probably the most straightforward way to make a prediction is to just calculate probability directly from your data, right? So imagine, I'm simply asking you to calculate probability from your data.
+
+What is the probability that my Y has a certain value, given that I have all of these feature values? Well, whatever Y I end up picking should probably...
+
+
+
+I should calculate the probability of chocolate in the future for that person, and then I 
+
+We can also calculate the probability of John Langer's features of that person, and say which probability was bigger? Well, in fact, the prediction was bigger.
+
+probability of Y given X is the probability of some Y class table given Y, X, H, or I. So to put that into practice, just click, hold here.
+
+So what would you predict if this is my penis and I'm given that the feature I'm predicting on is black.
+
+I have a cat with black fur, and I want to produce the same scent whether or not it's a cat or a dog or neither.
+
+Thank you for watching.
+
+Thank you for watching.
+
+
+
+📢 Share this video with your friends on social media.
+
+Alright, yeah, the vast majority of us chose cat, a couple chose dog, and one chose mime. But in general,
+
+I would look at this data set and I would think to myself, okay I'm going to go ahead and figure out which samples are actually samples of black fur and it looks like this sample
+
+On top, this third sample here, and then this fifth sample here have black fur, this is my only sample of black fur, two of them are cats, one of them is a dog, and so it looks like...
+
+it's more likely for the blackbird to be a cat than it is to be a dog. Any questions on this logic that I'm using here?
+
+Okay. Awesome. Right? So, out of all the samples with that feature X, what fraction of them have classifiable Y? And I use...
+
+in order to make my final prediction by trying to get the one that has a larger fraction. What if I gave you a different feature value?
+
+Here's my new feature vector. I'm trying to classify a pet with long black screen.
+
+
+
+チャンネル登録をお願いいたします。
+
+Okay, cool. So right now it seems the majority have gone higher, and the close second place is going to be cat.
+
+Most likely, the reason why the winning answer here is not here is because there is no sample here that has long plots in front, right? So if I were to take this probability...
+
+that say I'm surely familiar with these problems and the probability that a cat will
+
+I'm really just having a divide-by-zero error at this point, but probably the reason for that second place is thinking differently.
+
+Well, given the long and the black and the straight, I have two cats that have black and straight fur and one dog that has black and straight fur.
+
+and then there's like this one dog that has long fur and no cats, but overall maybe it would work out that the probability is better for the cat than for the dog.
+
+But it's not really concrete at this moment how we would pick that final solution. So, let's consider an alternative perspective, right? We were originally...
+
+So we're really looking at probability of Y given X, but it turns out that you can express that probability using other probability terms, and one is here defined by this theorem. Who's heard of it?
+
+Yeah. That one's a popular one. Definitely something that should be covered in your probability statistics report is alternative 
+
+So in this context, right, Y is our class label and X is our teacher values, so the probability of Y being X is the probability that the data point belongs to class Y.
+
+And then probability of X given Y is the probability of our future values X given the position point X on the mask Y. Let's see if this sticks to the topic.
+
+If I try and announce the probability in this chart form instead, that means now my quantifier is R-maximized for this base probability.
+
+you won't consider putting the original probability of Y in X. If I were my classifier, what would you predict?
+
+今日もご覧頂き有難う御座いました。
+
+Thank you for watching.
+
+. . 
+
+Okay, all right. We're still pretty much divided. We're a little bit more towards hat overall, but in general
+
+So the conclusion that I would come to is that no action is as simple as anything. I'm still divided by the probability of X, and from my data set, X doesn't exist, which means I'm still divided...
+
+So, what else could we do? Well, one thing we could do is proportions multiplication.
+
+Because in our classification, I'm simply asking what Y value maximizes the probability of a calculation. The X does not change.
+
+Thank you.
+
+So, we can actually use that, right? The idea was in the previous slide that the problem is that you're dividing by probability of X.
+
+and access the feature vector of Wall Street Worker. Awesome, why can't we look at the...
+
+So the real question then is, why can't we say probability of long times probability of straight times probability of black equals probability of straight times probability 
+
+probability of all being right. Okay. Can anyone say why that's not something you can just say?
+
+What assumption would we be making here? Yes, we would be assuming that the features are...
+
+And so there could be a valid assumption to make, and we'll actually be making the assumptions later on. But for right now, we're going to try and avoid making the assumption of independence.
+
+If the teacher values were independent of each other, then it would be valid to say that the probability of long and black and straight is equal to the probability of long and tarred.
+
+to properly lock, to properly restrict. But for right now, we're going to not state that independent assumption. We're just going to go with what is more straightforward and factual.
+
+So the example that I'm putting into place here, proportion simplification, is the idea that because in my classifier, I'm only interested in changing the y value.
+
+So yeah, there are some components of mathematics that can create a problem.
+
+probability of X will not change the solution of my problem, right? Because the probability of Y given X, if I divide it by X when Y equals capital,
+
+where if I divide it by absolute value for stock, I'm dividing it by the exact same value, and so which probability would be larger would not change. Any questions on that logic?
+
+... Okay. Stop!
+
+We've made one more minor edit to our classifier. We're now saying that we're going to take the argmax of probability of X given Y.
+
+Why does that make sense?
+
+I'm full! Please look forward to the next. Thank you for your viewing.
+
+We're no longer dividing by zero, which is great.
+
+But now, the problem is this. The probability of X, Y is going to be zero for every Y, because this sample does not exist, or you don't have a trendy sample with that feature.
+
+And so this is where we're going to introduce an assumption, right? And the assumption is going to be slightly different than the assumption that we listed earlier.
+
+The idea is that we will now assume that the feature values are independent when given a class.
+
+There's an argument to be made that this is not a great assumption to make either. A lot of the times, your features will not be independent of each other, even if they are.
+
+when you are given the class label, but it's a slightly weaker assumption than to assume that they are just independent generally when not given.
+
+So we sometimes feel a little bit more comfortable making this assumption, as opposed to the larger assumption that all of the features are independent, regardless of human input.
+
+So here is my new assumption that I'm making, that we could go ahead and split up probability of X given Y as equal to probability of X given Y.
+
+the product of probability of each individual feature of X given Y, and then we can go ahead and create our pool classifier as being R.
+
+R of max over this, right? R of max over probability of y times the product of probability of each individual feature x, u, and y.
+
+Any questions about interpreting some of the syntax or what exactly this assumption is?
+
+oop-aah-oh suck
+
+Did this fix anything? Well, first thing, this actually made things a little bit more complicated because now I've got a whole bunch of probabilities that I need to calculate.
+
+smaller probability values as opposed to just one large probability value over my entire data set. So before I ask you whether or not you can actually make a prediction…
+
+So the first thing we're going to do is I'm going to have a list of all of the different
+
+So what I have up here is CalcTables for each of the features as well as my class label. So this is a CalcTable for Berlin.
+
+This is a calc table for color, we've got for texture, and then we've got the pet label, whether or not it is a cat or a dog.
+
+I'm going to go ahead and give you a few minutes here to try and fill in these tables, and then I'll do a spot check with one of the problems. Let's check back in in two minutes.
+
+Feel free to follow up with any questions if you were confused about what we were doing.
+
+ご視聴ありがとうございました
+
+Oh, we're kind of good. See you.
+
+I wish I had a place to write.
+
+ご覧いただきありがとうございます
+
+Don't forget to like the video and subscribe to the channel.
+
+チャンネル登録をお願いいたします
+
+今日もご視聴ありがとうございました
+
+ご視聴ありがとうございました
+
+right
+
+One, two, three, four. Squash out here.
+
+What value goes in the four color table for black and cat? What did you get for this? Highlight a square.
+
+시청해 주셔서 감사합니다.
+
+📢 Share this video with your friends on social media.
+
+Thank you.
+
+So right now, we're just looking for calves. We're going to go with two. Nice. Okay. Go ahead and spot check.
+
+Anything else that you would like to confirm, but these are the palettes that I have. Any concerns about my mask?
+
+Now that we have counts, we do have to count these probabilities, so I'm going to go to
+
+So here's my empty set of charts again, but this time I would like to fill it in with probability values instead of count values. And so let's just do one more.
+
+check here as well. I want to calculate probability for the purple tuple for black and caverns.
+
+and not realize that it's not a person who wants to take it. But we'll do another chapter of the whole steps and quote, unquote, peddle, and it's just.
+
+
+
+Thank you so much for watching💛
+
+I wasn't talking to you for two-thirds, however, you can choose to answer two-thirds.
+
+Please do go ahead and double check for any other values here. The main thing to keep in mind is what point of these probabilities are.
+
+are at the right point. So we're trying to calculate probabilities that are listed in my classifier. So here in my classifier, I've got probability of X given Y.
+
+So therefore, when I fill in these probability tables, I'm not calculating the probability of cats being black, I'm calculating the probability of black people.
+
+So make sure the directionality of the probability values that you are calculating make sense within the context of our class plan. So go ahead and double check a couple of other values in the paper.
+
+move it along the way before we move on. Yes.
+
+Like that. Now, we go ahead and double check. All right. Something like this.
+
+I mean, why is it not 50%?
+
+That's my bad, I wasn't even here.
+
+I just for the purposes of math, go ahead and assume that I'm using the actual counts.
+
+We're secure. We have the right capabilities. Apologies for the error there. Technically, that should be fine. Okay. 
+
+Alright, anything else? Okay. Alright! What would you pick?
+
+Now probability values for all the pieces
+
+Okay, let's get it.
+
+Thank you.
+
+Alright, yeah, we end up actually majority voting for Donald Trump, which is not in agreement with what we all thought we were going to do.
+
+But the reason is because the probability of long given cat is zero. We don't have any examples of a cat.
+
+And because that single probability value was zero, it cancelled out all my other probabilities regardless of the fact that the probability of black given here is zero.
+
+is actually higher, the probability of script giving cache is also higher, so that's problematic because it could just be a sampling bias in our data.
+
+and the fact that this single zero probability is enough to completely zero out any conjugation
+
+all the other features is generally not desirable behavior, right? So, in order to fix that, we're going to go ahead and introduce student accounts. Who's familiar with the...
+
+and adding pseudocounts to our data? Okay, one or two, yeah. The idea is that adding a pseudocount is basically similar to assuming...
+
+that our data distribution would benefit from being mixed with a uniform distribution, where nothing is technically having a zero probability.
+
+So we don't want to inherit any additional biases about that distribution, so we're just going to uniformly state that we're going to add a single count to every possible, um...
+
+So, Laplace smoothing is very specifically when the pseudo count is equal to 1. There are some situations where you might want to add a smaller pseudo count.
+
+But the default is going to be the plots that are being formed as pseudocounts equal to 1. So here is my example. 
+
+And I've added one across the board for the Fur Light, Fur Color, and Fur Texture Calc Tables.
+
+What you'll notice is that I did not add anything to the text box. Let's go ahead and take a minute here and brainstorm.
+
+Why don't we add counts to pet tokens? Why might be the case that what we're doing with Plasmoodle...
+
+We will only add her to our featured articles.
+
+Okay.
+
+Thank you.
+
+오늘도 시청해주셔서 감사합니다.
+
+시청해주셔서 감사합니다.
+
+Alright, thank you.
+
+Let's see, I think probably, yeah, there's the idea of...
+
+The number of pets is still the same, not changing our distribution, we're trying to, we already have both cats, we don't want to skew the truth.
+
+Um, they're already included, there aren't any drill values. Nice. Yeah. So the basic answer, the most obvious and straightforward answer, is that we don't expect
+
+And if we have zero examples of that type in our dataset, well, we don't. And if we have zero examples of that type in our dataset, well, we don't.
+
+I don't think we should ever predict answers, it's just something we have zero information on, and so it shouldn't be a possibility anyway, there's no benefit to us.
+
+I've talked to somebody in New York regarding real estate solutions, and they said it's okay to talk to people about BAM, but that's what China is talking about here.
+
+of the pseudo-count on distribution. Now, either the pseudo-counts to our feature value give an impact on that distribution. But, because...
+
+a fair trade-off for the gain of no longer having to worry about zero probability values, right? But, is there a gain to be had if we disturb that?
+
+distribution value of our class labels. There could be, right? But maybe not specifically by adding a pseudocount.
+
+of you are using some good terminology here, right? In the sort of Bayes' Theorem context, the probability of our class labels are sometimes referred to as the prior probabilities.
+
+the prior – these are the probabilities that will be true before we know anything about the feature at all. Right? And so I just had this particular dataset, and I had a –
+
+and I had absolutely no idea what the probability of cats versus the probability of dogs. I did the probability of cats as 3 out of 7, and the probability of dogs as 1 out of 10.
+
+to 7, because that's the probability of me having my data set, right? So these are my priors before knowing anything about the data. That being said, in certain contexts...
+
+This may not be a good price, right? You can imagine, for example, that if I went instead to a grooming salon and I picked up a random piece of fur from the floor of a grooming salon and I asked...
+
+What's the probability that this is a cat versus the probability of a dog? Well, in most breeding salons, you're going to see a lot more dogs than cats, right? You're going to grow up with the quiet probability that this is a cat.
+
+the prior probability of a cat in front of that very small context. So having been given priors in my data set,
+
+being so close to even might not be a good assumption. So is there a way that we could handle that which is not the process even? We can go ahead and
+
+do a quick poll here actually of what pets you guys have. If you don't have any cats or dogs, feel free to just skip the question. But if you have at least one...
+
